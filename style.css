@@ -1,0 +1,295 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+/* css reset */
+
+/* start */
+
+.wrap {
+  margin: 0 auto;
+}
+
+.header {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header .photo {
+  display: block;
+}
+
+.header a img {
+  padding: 16px 0px 16px 42px;
+}
+
+.navlist {
+  display: flex;
+  padding-right: 17px;
+}
+
+.navlist li a {
+  text-decoration: none;
+  color: white;
+  padding: 16px 16px 31px 0px;
+}
+
+.navlist li a:hover {
+  color: orange;
+}
+/* pc隱藏 */
+.showmenu {
+  display: none;
+  text-decoration: none;
+  color: white;
+}
+
+/* header RWD 漢堡 */
+
+@media (max-width: 769px) {
+  /* 隱藏電腦菜單開始 */
+  .navlist {
+    max-height: 0px;
+    overflow: hidden;
+    /* 隱藏電腦選單結束 */
+    transition: all 1s;
+    position: absolute;
+    z-index: 99;
+    /* header  */
+    top: 53px;
+    left: 0px;
+    right: 0px;
+    /* 向下 */
+    flex-direction: column;
+    padding-right: 0px;
+    background-color: black;
+  }
+
+  .navlist li {
+    background: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    width: 100%;
+    /* padding漢堡上下 */
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .navlist li a {
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  .showmenu {
+    /* 區塊元素才會顯示 */
+    display: block;
+    float: right;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+  }
+  /* 漢堡出現 */
+  .menu-show .navlist {
+    max-height: 300px;
+  }
+
+  .header a img {
+    padding-left: 20px;
+  }
+}
+
+/* header 結束 */
+
+/* banner start */
+
+/* banner大圖 */
+.wrapheader {
+  background: url(./web/assets/header_desktop.png) no-repeat black center;
+  height: 420px;
+}
+
+/* banner小圖 rwd */
+@media (max-width: 769px) {
+  .wrapheader {
+    background: url(./web/assets/header_mobile.png);
+  }
+}
+
+.slogen {
+  max-width: 460px;
+  height: 152px;
+  background: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 150px;
+  text-align: center;
+  left: 550px;
+}
+
+.slogen h2 {
+  font-family: MicrosoftJhengHeiRegular;
+  font-size: 36px;
+  color: #ffffff;
+  padding: 20px 42px 16px 22px;
+}
+
+.slogen h3 {
+  font-family: MicrosoftJhengHeiRegular;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 16px 134px 26px 134px;
+}
+
+.slogen p {
+  font-family: MicrosoftJhengHeiRegular;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+@media (max-width: 769px) {
+  .slogen {
+    height: auto;
+    left: auto;
+    right: auto;
+  }
+
+  .slogen h2 {
+    font-size: 28px;
+  }
+
+  .slogen p {
+    font-size: 14px;
+    padding-bottom: 26px;
+  }
+}
