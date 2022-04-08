@@ -179,7 +179,7 @@ table {
 
 /* header RWD 漢堡 */
 
-@media (max-width: 769px) {
+@media (max-width: 820px) {
   /* 隱藏電腦菜單開始 */
   .navlist {
     max-height: 0px;
@@ -232,8 +232,6 @@ table {
 
 /* header 結束 */
 
-/* banner start */
-
 /* banner大圖 */
 .wrapheader {
   background: url(./web/assets/header_desktop.png) no-repeat black center;
@@ -241,14 +239,14 @@ table {
 }
 
 /* banner小圖 rwd */
-@media (max-width: 769px) {
+@media (max-width: 820px) {
   .wrapheader {
-    background: url(./web/assets/header_mobile.png);
+    background: url(./web/assets/header_mobile.png) no-repeat black center;
   }
 }
 
 .slogen {
-  max-width: 460px;
+  max-width: 100%;
   height: 152px;
   background: rgba(0, 0, 0, 0.35);
   position: absolute;
@@ -277,8 +275,9 @@ table {
   color: #ffffff;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 820px) {
   .slogen {
+    width: 100%;
     height: auto;
     left: auto;
     right: auto;
